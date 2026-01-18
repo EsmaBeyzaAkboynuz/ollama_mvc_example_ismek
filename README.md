@@ -1,4 +1,3 @@
-```
 # Local LLM & RAG Backend Architecture (FastAPI + MVC)
 
 Bu proje, **yerel LLM (Large Language Model)** modelleri ve **RAG (Retrieval-Augmented Generation)** mimarisini, **ölçeklenebilir ve sürdürülebilir bir Backend servisi** olarak sunmak amacıyla geliştirilmiş bir **bitirme projesidir**.

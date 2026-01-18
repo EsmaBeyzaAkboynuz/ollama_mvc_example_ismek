@@ -1,9 +1,14 @@
 # main.py
+
 from fastapi import FastAPI
-
 from src.controllers import controller_rag, controller_health, controller_log, controller_ollama
+import uvicorn
 
-application = FastAPI()
+application = FastAPI(
+    title="Ollama MVC Backend",
+    description="Local LLM and RAG Architecture Project",
+    version="1.0.0"
+)
 
 application.include_router(controller_rag.router)
 application.include_router(controller_health.router)
@@ -11,8 +16,6 @@ application.include_router(controller_log.router)
 application.include_router(controller_ollama.router)
 
 if __name__ == "__main__":
-    import uvicorn
-    
     uvicorn.run(application, host="0.0.0.0", port=13456)
     
 # TODO: ALL
